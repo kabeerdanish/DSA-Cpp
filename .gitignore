@@ -1,1 +1,16 @@
+# Executable files
 *.exe
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.pdb
+
+# Visual Studio build folders
+.vs/
+Debug/
+Release/
+x64/
+x86/
