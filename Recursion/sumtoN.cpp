@@ -7,5 +7,5 @@ int sum(int n){ // tc and sc -> O(n)
 }
 
 int main(){
-    cout << sum(5) << endl;
+    cout << sum(10) << endl;
 }
