@@ -256,6 +256,7 @@ class singlyLinkedList{
             prev = curr;
             curr = Next;
         }
+        head->next = nullptr;
         head = prev;
     }
 
