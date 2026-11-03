@@ -1,33 +1,27 @@
 #include<iostream>
 using namespace std;
 
+// recursively
 int fib(int n){ // tc->O(2^n) , sc->O(n)
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    
+    if (n == 0 || n == 1) return n;
     return fib(n-1) + fib(n-2);
 }
 
 
-int main(){
-
-    // int prev = 0;
-    // int curr = 1;
-    // int next = 0;
-
-    // for(int i=0; prev<10 ; i++){ // we can use condition i<n for n terms
-    //     cout << prev << " ";
-    //     next = prev + curr;
-    //     prev = curr;
-    //     curr = next;
-    // }
-    int n;
-    cout << "Enter no of terms you want for fibonacci: ";
-    cin >> n; 
-    int i=0;
-    while(i < n){
-        cout << fib(i) << " ";
-        i++;
+// iteratively
+void fibI(int n){
+    int a=0, b=1, c = 0;
+    for(int i=1; i<=n; i++){
+        cout << a << " ";
+        c = a + b;
+        a = b;
+        b = c;
     }
+}
 
+int main(){
+    // for(int i=0; i<8; i++){
+    //     cout << fib(i) << " ";
+    // }
+    fibI(8);
 }
