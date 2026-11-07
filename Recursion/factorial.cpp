@@ -44,7 +44,7 @@ using namespace std;
 // 3	Calculate sum of array	150
 // 4	Calculate product of elements	12000000
 // 5	Count even elements	2
-// 6	Count odd elements	3
+// 6	Count odd elements	33
 // 7	Find maximum element	50
 // 8	Find minimum element	10
 
@@ -52,7 +52,7 @@ using namespace std;
 // Towers of Hanoi
 
 // Counting grid squares in a blob
-// reverse string, finding length of string, print string char wise, gcd
+// reverse string, finding length of string, print string char wise, gcd, lcm
 // digit sum, reverse number, count digits
 // Medium	Array sum, maximum, minimum, search, sorted check
 // Medium	Reverse array, palindrome string, binary search
@@ -65,6 +65,12 @@ int factorial(int n){ // tc and sc -> O(n)
     if(n == 0 || n == 1) return 1;
     return n*factorial(n-1);
     
+
+}
+
+int factorialTail(int n , int res){
+    if(n == 0) return res;
+    return factorialTail(n-1, res*n);
 }
 
 
@@ -75,7 +81,8 @@ int main(){
         if (i == 1) cout << i;
         else cout << i << "*";
     }
-    cout << " = " << factorial(n);
+    cout << " = " << factorial(n) << endl;
+    cout << factorialTail(6, 1);
 }
 
 
